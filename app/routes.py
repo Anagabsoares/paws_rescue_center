@@ -3,9 +3,9 @@ from datetime import datetime
 from flask import Blueprint, jsonify, make_response, request, abort, render_template
 home_bp = Blueprint('goals', __name__, url_prefix='')
 
-@home_bp.route('/')
+@home_bp.route('/home')
 def home():
-    return "Paws Rescue Center 🐾"
+    return render_template('home.html')
 
 @home_bp.route('/about')
 def about():
